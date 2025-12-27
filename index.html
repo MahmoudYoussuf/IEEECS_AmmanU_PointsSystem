@@ -169,9 +169,9 @@
         </div>
     </div>
     <!-- Cell Modal -->
-    <div id="cellModal" class="fixed inset-0 z-[80] bg-black/90 hidden items-center justify-center backdrop-blur-sm p-4"><div class="glass-panel p-6 rounded-2xl w-full max-w-md shadow-2xl border border-slate-600"><div class="flex justify-between items-start mb-4"><div><h3 class="text-xl font-bold text-white" id="cellModalTitle">Edit Action</h3><p class="text-slate-400 text-xs mt-1" id="cellModalSubtitle">Manage dates for this score</p></div><button onclick="closeCellModal()" class="text-slate-400 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button></div><div class="mb-4 max-h-40 overflow-y-auto bg-slate-900/50 rounded-lg border border-slate-700 p-2"><table class="w-full text-sm text-left"><thead><tr class="text-xs text-slate-500 border-b border-slate-700"><th class="pb-1 pl-2">Date</th><th class="pb-1 pl-2">Time</th><th class="pb-1">Value</th><th class="pb-1 text-right">Action</th></tr></thead><tbody id="cellHistoryBody" class="divide-y divide-slate-800"></tbody></table><div id="noHistoryMsg" class="text-center text-xs text-slate-500 py-2 hidden">No specific dates recorded.</div></div><div class="bg-slate-800 p-3 rounded-lg border border-slate-700"><label class="block text-xs font-bold text-slate-400 uppercase mb-2">Add New Entry</label><div class="flex gap-2"><input type="date" id="cellNewDate" class="bg-slate-900 border border-slate-600 rounded px-2 py-1 text-white text-sm w-full outline-none focus:border-indigo-500"><input type="number" id="cellNewCount" value="1" class="bg-slate-900 border border-slate-600 rounded px-2 py-1 text-white text-sm w-16 text-center outline-none focus:border-indigo-500"><button onclick="addCellEntry()" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded px-3 py-1 text-sm font-bold transition-colors">+</button></div></div></div></div>
+    <div id="cellModal" class="fixed inset-0 z-[80] bg-black/90 hidden items-center justify-center backdrop-blur-sm p-4"><div class="glass-panel p-6 rounded-2xl w-full max-w-md shadow-2xl border border-slate-600"><div class="flex justify-between items-start mb-4"><div><h3 class="text-xl font-bold text-white" id="cellModalTitle">Edit Action</h3><p class="text-slate-400 text-xs mt-1" id="cellModalSubtitle">Manage dates for this score</p></div><button onclick="closeCellModal()" class="text-slate-400 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button></div><div class="mb-4 max-h-40 overflow-y-auto bg-slate-900/50 rounded-lg border border-slate-700 p-2"><table class="w-full text-sm text-left"><thead><tr class="text-xs text-slate-500 border-b border-slate-700"><th class="pb-1 pl-2">Date</th><th class="pb-1 pl-2">Time</th><th class="pb-1">Val</th><th class="pb-1">Note</th><th class="pb-1 text-right">Action</th></tr></thead><tbody id="cellHistoryBody" class="divide-y divide-slate-800"></tbody></table><div id="noHistoryMsg" class="text-center text-xs text-slate-500 py-2 hidden">No specific dates recorded.</div></div><div class="bg-slate-800 p-3 rounded-lg border border-slate-700"><label class="block text-xs font-bold text-slate-400 uppercase mb-2">Add New Entry</label><div class="flex flex-col gap-2"><div class="flex gap-2"><input type="date" id="cellNewDate" class="bg-slate-900 border border-slate-600 rounded px-2 py-1 text-white text-sm w-full outline-none focus:border-indigo-500"><input type="number" id="cellNewCount" value="1" class="bg-slate-900 border border-slate-600 rounded px-2 py-1 text-white text-sm w-16 text-center outline-none focus:border-indigo-500"></div><div class="flex gap-2"><input type="text" id="cellNewNote" placeholder="Optional note..." class="bg-slate-900 border border-slate-600 rounded px-2 py-1 text-white text-sm w-full outline-none focus:border-indigo-500"><button onclick="addCellEntry()" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded px-3 py-1 text-sm font-bold transition-colors">Add</button></div></div></div></div></div>
     <!-- History Modal -->
-    <div id="historyModal" class="fixed inset-0 z-[75] bg-black/90 hidden items-center justify-center backdrop-blur-sm p-4"><div class="glass-panel p-6 rounded-2xl w-full max-w-4xl shadow-2xl border border-slate-600 h-[80vh] flex flex-col"><div class="flex justify-between items-center mb-6 flex-shrink-0"><h3 class="text-xl font-bold text-white" data-translate="history_title">Full Activity Log</h3><button onclick="closeHistoryModal()" class="text-slate-400 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button></div><div class="flex-grow overflow-auto"><table class="w-full text-left text-sm"><thead class="text-xs text-slate-500 uppercase bg-slate-800 sticky top-0"><tr><th class="px-4 py-3" data-translate="th_date">Date</th><th class="px-4 py-3" data-translate="th_time">Time</th><th class="px-4 py-3" data-translate="th_member">Member</th><th class="px-4 py-3" data-translate="th_action_log">Action</th><th class="px-4 py-3 text-right" data-translate="th_points">Points</th><th class="px-4 py-3 text-right" data-translate="th_del">Del</th></tr></thead><tbody id="fullHistoryBody" class="divide-y divide-slate-700 text-slate-300"></tbody></table></div></div></div>
+    <div id="historyModal" class="fixed inset-0 z-[75] bg-black/90 hidden items-center justify-center backdrop-blur-sm p-4"><div class="glass-panel p-6 rounded-2xl w-full max-w-4xl shadow-2xl border border-slate-600 h-[80vh] flex flex-col"><div class="flex justify-between items-center mb-6 flex-shrink-0"><h3 class="text-xl font-bold text-white" data-translate="history_title">Full Activity Log</h3><button onclick="closeHistoryModal()" class="text-slate-400 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button></div><div class="flex-grow overflow-auto"><table class="w-full text-left text-sm"><thead class="text-xs text-slate-500 uppercase bg-slate-800 sticky top-0"><tr><th class="px-4 py-3" data-translate="th_date">Date</th><th class="px-4 py-3" data-translate="th_time">Time</th><th class="px-4 py-3" data-translate="th_member">Member</th><th class="px-4 py-3" data-translate="th_action_log">Action</th><th class="px-4 py-3">Note</th><th class="px-4 py-3 text-right" data-translate="th_points">Points</th><th class="px-4 py-3 text-right" data-translate="th_del">Del</th></tr></thead><tbody id="fullHistoryBody" class="divide-y divide-slate-700 text-slate-300"></tbody></table></div></div></div>
 
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
@@ -374,10 +374,11 @@
           if (!logDate.startsWith(currentMonth)) logDate = currentMonth + "-01";
           const timeString = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-          member.history.push({ actionIdx: actionIndex, date: logDate, time: timeString, count: diff, note: "Manual Edit" });
+          member.history.push({ actionIdx: actionIndex, date: logDate, time: timeString, count: diff, note: "-" });
           saveMemberScore(member);
       };
       
+      // ... Modal Logic (Cell, Member, History) attached to Window ...
       window.openCellModal = function(mIdx, aIdx) { if(isRangeMode) return; activeMemberId = teamData[mIdx].id; activeActionIndex = aIdx; document.getElementById('cellModalTitle').innerText = teamData[mIdx].name; const k = ['act_lead','act_medium','act_idea','act_simple','act_late','act_active','act_present','act_absent_excused','act_absent_no'][aIdx]; document.getElementById('cellModalSubtitle').innerText = (i18n[currentLang][k]||actionNames[aIdx]) + ` (${pointsMap[aIdx]} pts)`; let d = new Date().toISOString().slice(0,10); if(!d.startsWith(currentMonth)) d=currentMonth+"-01"; document.getElementById('cellNewDate').value=d; document.getElementById('cellNewCount').value=1; renderCellHistory(teamData[mIdx], aIdx); document.getElementById('cellModal').classList.remove('hidden'); document.getElementById('cellModal').classList.add('flex'); };
       window.closeCellModal = function() { document.getElementById('cellModal').classList.add('hidden'); document.getElementById('cellModal').classList.remove('flex'); activeMemberId=null; };
       
@@ -388,20 +389,30 @@
           logs.forEach(log => {
               const rIdx = member.history.indexOf(log);
               const tr = document.createElement('tr'); tr.className = "border-b border-slate-800 last:border-0";
-              tr.innerHTML = `<td class="py-2 pl-2 text-slate-300">${log.date}</td><td class="py-2 pl-2 text-slate-400 text-xs">${log.time||'-'}</td><td class="py-2 text-white font-bold">${log.count>0?'+'+log.count:log.count}</td><td class="py-2 text-right"><button onclick="deleteLogEntry('${member.id}', ${rIdx})" class="text-red-400 hover:text-white px-2">&times;</button></td>`;
+              tr.innerHTML = `<td class="py-2 pl-2 text-slate-300">${log.date}</td><td class="py-2 pl-2 text-slate-400 text-xs">${log.time||'-'}</td><td class="py-2 text-white font-bold">${log.count>0?'+'+log.count:log.count}</td>
+              <td class="py-2">
+                 <div class="flex items-center gap-2">
+                    <div class="truncate max-w-[100px] text-sm text-slate-400" id="note-${member.id}-${rIdx}">${log.note||'-'}</div>
+                    ${log.note ? `<button onclick="toggleVisibility('note-${member.id}-${rIdx}')" class="text-xs text-indigo-400 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg></button>` : ''}
+                 </div>
+              </td>
+              <td class="py-2 text-right"><button onclick="deleteLogEntry('${member.id}', ${rIdx})" class="text-red-400 hover:text-white px-2">&times;</button></td>`;
               tbody.appendChild(tr);
           }); }
       }
       
       window.addCellEntry = function() {
           const d = document.getElementById('cellNewDate').value; const c = parseInt(document.getElementById('cellNewCount').value);
+          const note = document.getElementById('cellNewNote').value || "";
           if(!d || isNaN(c) || c===0) return alert("Invalid");
           const m = teamData.find(x => x.id === activeMemberId);
           if(m) {
               const t = new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
-              m.history.push({ actionIdx: activeActionIndex, date: d, time: t, count: c, note: "Detail" });
+              m.history.push({ actionIdx: activeActionIndex, date: d, time: t, count: c, note: note });
+              
               saveMemberScore(m); renderCellHistory(m, activeActionIndex); 
           }
+          document.getElementById('cellNewNote').value = ""; // Clear note input
       };
       
       window.deleteLogEntry = function(mId, lIdx) {
@@ -425,8 +436,27 @@
           const id = document.getElementById('editMemberId').value;
           const name = document.getElementById('newMemberName').value.trim();
           if(!name) return alert("Name required");
-          if(id) { const idx = membersDB.findIndex(x=>x.id===id); if(idx>-1) membersDB[idx] = {...membersDB[idx], name: name, uniId: document.getElementById('newUniId').value, position: document.getElementById('newPosition').value}; }
-          else { membersDB.push({ id: Date.now().toString(), name: name, uniId: document.getElementById('newUniId').value, position: document.getElementById('newPosition').value }); }
+          if(id) { 
+              const idx = membersDB.findIndex(x=>x.id===id); 
+              if(idx>-1) membersDB[idx] = {
+                  ...membersDB[idx], 
+                  name: name, 
+                  uniId: document.getElementById('newUniId').value, 
+                  ieeeId: document.getElementById('newIeeeId').value,
+                  major: document.getElementById('newMajor').value,
+                  position: document.getElementById('newPosition').value
+              }; 
+          }
+          else { 
+              membersDB.push({ 
+                  id: Date.now().toString(), 
+                  name: name, 
+                  uniId: document.getElementById('newUniId').value, 
+                  ieeeId: document.getElementById('newIeeeId').value,
+                  major: document.getElementById('newMajor').value,
+                  position: document.getElementById('newPosition').value 
+              }); 
+          }
           saveRoster().then(() => { loadData(); window.renderMemberList(); window.cancelEdit(); });
       };
       
@@ -438,12 +468,22 @@
       
       window.editMember = function(id) {
           const m = membersDB.find(x => x.id === id); if(!m) return;
-          document.getElementById('editMemberId').value = m.id; document.getElementById('newMemberName').value = m.name; document.getElementById('newUniId').value = m.uniId||''; document.getElementById('newPosition').value = m.position||'';
+          document.getElementById('editMemberId').value = m.id; 
+          document.getElementById('newMemberName').value = m.name; 
+          document.getElementById('newUniId').value = m.uniId||''; 
+          document.getElementById('newIeeeId').value = m.ieeeId||''; 
+          document.getElementById('newMajor').value = m.major||''; 
+          document.getElementById('newPosition').value = m.position||'';
           document.getElementById('saveMemberBtn').innerText = "Save"; document.getElementById('cancelEditBtn').classList.remove('hidden');
       };
       
       window.cancelEdit = function() {
-          document.getElementById('editMemberId').value = ""; document.getElementById('newMemberName').value = ""; document.getElementById('newUniId').value = ""; document.getElementById('newPosition').value = "";
+          document.getElementById('editMemberId').value = ""; 
+          document.getElementById('newMemberName').value = ""; 
+          document.getElementById('newUniId').value = ""; 
+          document.getElementById('newIeeeId').value = ""; 
+          document.getElementById('newMajor').value = ""; 
+          document.getElementById('newPosition').value = "";
           document.getElementById('saveMemberBtn').innerText = "Add"; document.getElementById('cancelEditBtn').classList.add('hidden');
       };
 
@@ -519,10 +559,28 @@
           allLogs.sort((a,b) => new Date(b.date+' '+(b.time||'00:00')) - new Date(a.date+' '+(a.time||'00:00')));
           allLogs.forEach(l => {
               const tr = document.createElement('tr');
-              tr.innerHTML = `<td class="px-4 py-2">${l.date}</td><td class="px-4 py-2 text-slate-400 text-xs">${l.time||'-'}</td><td class="px-4 py-2 text-white">${l.mName}</td><td class="px-4 py-2">${actionNames[l.actionIdx]} (${l.count})</td><td class="px-4 py-2 text-right ${l.pts>=0?'text-emerald-400':'text-red-400'}">${l.pts}</td><td class="px-4 py-2 text-right"><button onclick="deleteGlobalLogEntry('${l.mId}', ${l.oIdx})" class="text-slate-500 hover:text-red-400">&times;</button></td>`;
+              tr.innerHTML = `<td class="px-4 py-2">${l.date}</td><td class="px-4 py-2 text-slate-400 text-xs">${l.time||'-'}</td><td class="px-4 py-2 text-white">${l.mName}</td><td class="px-4 py-2">${actionNames[l.actionIdx]} (${l.count})</td>
+              <td class="px-4 py-2">
+                 <div class="flex items-center gap-2">
+                    <div class="truncate max-w-[150px] text-sm text-slate-400" id="hist-note-${l.mId}-${l.oIdx}">${l.note||'-'}</div>
+                    ${l.note ? `<button onclick="toggleVisibility('hist-note-${l.mId}-${l.oIdx}')" class="text-xs text-indigo-400 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg></button>` : ''}
+                 </div>
+              </td>
+              <td class="px-4 py-2 text-right ${l.pts>=0?'text-emerald-400':'text-red-400'}">${l.pts}</td><td class="px-4 py-2 text-right"><button onclick="deleteGlobalLogEntry('${l.mId}', ${l.oIdx})" class="text-slate-500 hover:text-red-400">&times;</button></td>`;
               tbody.appendChild(tr);
           });
           document.getElementById('historyModal').classList.remove('hidden'); document.getElementById('historyModal').classList.add('flex');
+      };
+      
+      window.toggleVisibility = function(elementId) {
+          const el = document.getElementById(elementId);
+          if(el) {
+              el.classList.toggle('truncate');
+              el.classList.toggle('max-w-[150px]'); // for history modal
+              el.classList.toggle('max-w-[100px]'); // for cell modal
+              el.classList.toggle('whitespace-normal');
+              el.classList.toggle('break-all');
+          }
       };
       
       window.closeHistoryModal = function() { document.getElementById('historyModal').classList.add('hidden'); document.getElementById('historyModal').classList.remove('flex'); };
@@ -541,14 +599,9 @@
           
           let currentIter = new Date(start + "-01");
           const endDate = new Date(end + "-01");
-          // Use in-memory filtering since firestore snapshot provides all docs.
-          // Re-fetch all docs? No, we subscribed.
-          // But wait, the snapshot listener filters by currentMonth.
-          // To view range, we need to fetch ALL docs in range.
-          // Since we can't easily change subscription filters dynamically without complexity,
-          // let's do a one-off fetch for range view.
-          
           const aggregatedMap = {};
+          
+          // Seed with roster
           membersDB.forEach(m => { aggregatedMap[m.id] = { ...m, actions: Array(pointsMap.length).fill(0), history: [] }; });
           
           // Fetch logic for range
